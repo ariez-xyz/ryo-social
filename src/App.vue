@@ -1,11 +1,9 @@
 <template>
   <div id="app">
-    <div class="cookieDisclaimer" v-if="!clicked">
+    <div class="cookieDisclaimer" v-if="!disclaimerClicked">
       <p class="alert">DISCLAIMER</p>
-      <p>This site uses cookies
-        <br>Also, <b class="blink">Fuck You</b></p>
-      <button v-on:click="clicked = true">IDGAF</button>
-      <button v-on:click="clicked = true">Fuck you too</button>
+      <p>This site uses cookies</p>
+      <button v-on:click="disclaimerClicked = true">Go away</button>
     </div>
 
     <div id="nav">
@@ -29,7 +27,7 @@
   export default {
     data: function () {
       return {
-        clicked: false
+        disclaimerClicked: false
       }
     }
   }
