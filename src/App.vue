@@ -1,31 +1,36 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="cookieDisclaimer" v-if="!clicked">
+      <p class="alert">DISCLAIMER</p>
+      <p>This site uses cookies
+        <br>Also, <b class="blink">Fuck You</b></p>
+      <button v-on:click="clicked = true">IDGAF</button>
+      <button v-on:click="clicked = true">Fuck you too</button>
     </div>
-    <router-view />
+
+    <div id="nav">
+      <router-link to="/"><b>Main</b></router-link> |
+      <router-link to="/about"><b>FAQ</b></router-link> |
+      <router-link to="/coc"><b>Verhaltenskodex</b></router-link> |
+      <router-link to="/complaints"><b>Beschwerden</b></router-link>
+    </div>
+
+    <router-view/>
+
   </div>
 </template>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  @import "https://fonts.googleapis.com/css?family=Montserrat:700,900&display=swap";
+  @import "styles/main.css";
 </style>
+
+<script>
+  export default {
+    data: function () {
+      return {
+        clicked: false
+      }
+    }
+  }
+</script>

@@ -1,0 +1,80 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.testClass {
+    background-color: red;
+}
+
+#testId {
+    background-color: red;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 64px;
+}
+
+h2 {
+    font-weight: 900;
+}
+
+button {
+    background-color: white;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 5px 15px;
+    margin: 2px;
+    border-style: double solid solid double;
+    border-color: black;
+    border-width: 3px;
+    text-decoration: underline;
+    outline: none;
+}
+
+b {
+    font-weight: 900;
+}
+
+button:active {
+    -webkit-transform: translate(2px, 2px);
+    -moz-transform: translate(2px, 2px);
+    -ms-transform: translate(2px, 2px);
+    -o-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+
+    border-style: double solid solid double;
+    border-color: black;
+    border-width: 3px 1px 1px 3px;
+    margin: 2px 4px 4px 2px;
+}
+
+.blink {
+    animation: blink .75s linear infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.cookieDisclaimer {
+    border: 2px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    position:absolute;
+    z-index: 100;
+    background-color: white;
+}
+
+.alert {
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 0.2rem;
+    color: #F00
+}
+
